@@ -4,7 +4,6 @@ import com.company.models.Jogador;
 import com.company.models.Selecao;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class Main {
@@ -20,14 +19,13 @@ public class Main {
         Jogador j6 = new Jogador(1, "Oduber", "Goleiro");
 
 
-        braza.addJogador(j1);
-        braza.addJogador(j2);
-        braza.addJogador(j3);
-        braza.addJogador(j4);
-        braza.addJogador(j5);
-        braza.addJogador(j6);
+        ArrayList<Jogador> jogadoresPraAdicionar = new ArrayList<Jogador>();
+
+        Collections.addAll(jogadoresPraAdicionar, j1, j2, j3, j4, j5, j6);
+
+        braza.addJogador(jogadoresPraAdicionar);
 
         System.out.println(braza.obterReservas());
-        System.out.println(braza.quantidadeDeJogadores("Falso 9"));
+        System.out.println(braza.quantidadeDeJogadores("Atacante"));
     }
 }

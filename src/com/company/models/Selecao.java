@@ -18,6 +18,10 @@ public class Selecao {
         jogadores.add(jogador);
     }
 
+    public void addJogador(ArrayList<Jogador> jogadoresPraAdicionar){
+        jogadores.addAll(jogadoresPraAdicionar);
+    }
+
     public ArrayList<Jogador> obterReservas(){
         ArrayList<Jogador> reservas = new ArrayList<Jogador>();
         for(int i = 1; i < 6; i ++){
